@@ -1,0 +1,17 @@
+---
+# Requires 'tornodes' host group in Ansible inventory.
+- hosts: tornodes
+  become: yes
+  vars:
+    # Tested with Debian and Gentoo hosts.
+    tor_group: "{{ 'debian-tor' if ansible_os_family == 'Debian' else 'tor' }}"
+
+  tasks:
+  - name: Update torrc
+    copy: src=conf/{{ ansible_hostname }}/torrc dest=/etc/tor/torrc owner=root group={{ tor_group }} mode=0640
+    notify:
+      - Reload Tor
+
+  handlers:
+  - name: Reload Tor
+    service: name=tor state=reloaded
