@@ -1,5 +1,5 @@
 ---
-# Requires 'tornodes' host group in Ansible inventory.
+# Requires host group 'tornodes' in Ansible inventory.
 - hosts: tornodes
   become: yes
   vars:
