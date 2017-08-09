@@ -1,0 +1,3 @@
+# Shared exit policies (reject)
+ExitPolicy reject 87.106.18.130:* # http://www.abuseat.org/lookup.cgi?ip=88.198.125.96 (Torpig C&C sinkhole)
+ExitPolicy reject 38.102.150.27:* # Conficker sinkhole

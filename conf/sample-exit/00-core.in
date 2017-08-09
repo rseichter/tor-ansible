@@ -1,0 +1,19 @@
+# Core settings for a sample Tor exit on Debian Linux
+DisableDebuggerAttachment 0
+SOCKSPort 0
+Log notice syslog
+# Make sure a local caching resolver is used for better anonymity
+ServerDNSResolvConfFile /etc/resolv.conf.local
+# Be specific if the server has multiple network interfaces
+Address 123.234.123.234
+OutboundBindAddress 123.234.123.234
+# Debian specific daemon setting
+RunAsDaemon 0
+DataDirectory /var/lib/tor/data
+ControlPort 9051
+ORPort 443
+ContactInfo whatever@some.do.main
+Nickname MySampleExit
+BandwidthRate 50 MBits
+BandwidthBurst 60 MBits
+DirPort 80

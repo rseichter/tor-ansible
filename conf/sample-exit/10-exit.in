@@ -1,0 +1,8 @@
+# Exit server base settings
+DirPortFrontPage /etc/tor/exit-notice.html
+ExitRelay 1
+ExitPortStatistics 1
+# Reject exit to machine-local addresses
+ExitPolicy reject 123.234.123.234:*
+ExitPolicy reject 123.234.123.235:*
+ExitPolicy reject 123.234.123.236:*

@@ -1,0 +1,17 @@
+# panelboxmanager.com Unrouted network segments
+# https://whois.arin.net/rest/org/PANEL-2/nets
+ExitPolicy reject 67.205.90.240/28:*
+ExitPolicy reject 67.205.105.0/24:*
+ExitPolicy reject 67.205.125.0/24:*
+ExitPolicy reject 70.38.127.64/26:*
+ExitPolicy reject 72.55.152.240/28:*
+ExitPolicy reject 72.55.186.0/24:*
+ExitPolicy reject 108.163.128.64/26:*
+ExitPolicy reject 108.163.147.0/24:*
+ExitPolicy reject 174.142.230.0/24:*
+ExitPolicy reject 184.107.100.0/24:*
+ExitPolicy reject 184.107.101.0/24:*
+ExitPolicy reject 184.107.111.96/27:*
+ExitPolicy reject 184.107.116.0/24:*
+ExitPolicy reject 198.72.104.0/24:*
+ExitPolicy reject 209.172.50.32/27:*

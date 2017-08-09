@@ -1,0 +1,23 @@
+# Shared exit policies
+ExitPolicy accept *:43			# WHOIS
+ExitPolicy accept *:53			# DNS
+ExitPolicy accept *:79			# Finger
+ExitPolicy accept *:80			# HTTP
+ExitPolicy accept *:110			# POP3
+ExitPolicy accept *:123			# NTP
+ExitPolicy accept *:143			# IMAP
+ExitPolicy accept *:220			# IMAP3
+ExitPolicy accept *:389			# LDAP
+ExitPolicy accept *:443			# HTTPS
+ExitPolicy accept *:464			# kpasswd
+ExitPolicy accept *:636			# LDAPS
+ExitPolicy accept *:993			# IMAPS
+ExitPolicy accept *:995			# POP3S
+ExitPolicy accept *:3690		# Subversion
+ExitPolicy accept *:8080		# HTTP (alt)
+ExitPolicy accept *:8088		# HTTP (alt)
+ExitPolicy accept *:8443		# HTTPS (alt)
+ExitPolicy accept *:9418		# git
+ExitPolicy accept *:11371		# OpenPGP hkp
+ExitPolicy accept *:64738		# Mumble
+ExitPolicy reject *:*			# Forbid all others
