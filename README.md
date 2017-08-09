@@ -1,6 +1,6 @@
 ## Ansible playbook for maintaining Tor nodes
 
-This playbook is designed to generate `torrc` configuration files from a set of separate text files and then conveniently distribute the config data to a set of Tor nodes. Config data for each tor node resides in a `conf/node_name` subdirectory, with node_name matching the Ansible host name. See samples. All subdirectories will be processed automatically. All found `*.in` files can be combined to a torrc file by using
+This playbook is designed to generate `torrc` configuration files from a set of separate text files and then conveniently distribute the config data to a set of Tor nodes. Config data for each node resides in a `conf/node_name` subdirectory, with node_name matching the Ansible host name. See samples. All subdirectories will be processed automatically. All found `*.in` files can be combined to a torrc file by using
 ```
 $ make gen
 ```
