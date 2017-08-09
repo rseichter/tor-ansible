@@ -1,0 +1,2 @@
+# Relay only, no exits allowed
+ExitPolicy reject *:*

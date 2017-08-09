@@ -1,0 +1,20 @@
+#!/bin/bash
+# vim:ts=4
+
+dirs="$(find . -mindepth 1 -maxdepth 1 -type d -print)"
+if [ -z "$dirs" ]; then
+	echo "Can't find any subdirectories"
+	exit 1
+fi
+
+function doGen {
+	for x in ./*.in; do
+		grep -v '^##' $x
+	done
+}
+
+for dir in $dirs; do
+	pushd $dir >/dev/null || exit 1
+	doGen >torrc
+	popd >/dev/null
+done

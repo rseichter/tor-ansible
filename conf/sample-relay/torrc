@@ -1,0 +1,26 @@
+# Core configuration for a sample Tor relay running on Gentoo Linux,
+# with a preference for IPv6
+User tor
+DisableDebuggerAttachment 0
+PIDFile /run/tor/tor.pid
+DataDirectory /var/lib/tor/data
+Log notice syslog
+RunAsDaemon 1
+ControlPort 9051
+SOCKSPort 0
+DirPort 9030
+DirPort [sample-IPv6-address]:9030 NoAdvertise
+ORPort 9001
+ORPort [sample-IPv6-address]:9001
+Nickname sample-nickname
+ContactInfo sample@some.do.main
+BandwidthRate 20 MBits
+BandwidthBurst 25 MBits
+ClientUseIPv6 1
+ClientPreferIPv6DirPort 1
+ClientPreferIPv6ORPort 1
+CellStatistics 1
+ConnDirectionStatistics 1
+EntryStatistics 1
+# Relay only, no exits allowed
+ExitPolicy reject *:*
