@@ -12,7 +12,7 @@ DirPort 9030
 DirPort [sample-IPv6-address]:9030 NoAdvertise
 ORPort 9001
 ORPort [sample-IPv6-address]:9001
-Nickname sample-nickname
+Nickname MySampleRelay
 ContactInfo sample@some.do.main
 BandwidthRate 20 MBits
 BandwidthBurst 25 MBits
