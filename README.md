@@ -1,4 +1,4 @@
-## Ansible playbook for maintaining Tor nodes
+## [Ansible](https://www.ansible.com) playbook for maintaining Tor nodes
 
 This playbook is designed to generate `torrc` configuration files from a set of separate text files and then conveniently distribute the config data to a set of Tor nodes. Config data for each node resides in a `conf/node_name` subdirectory, with node_name matching the Ansible host name. See samples. All subdirectories will be processed automatically. All found `*.in` files can be combined to a torrc file by using
 ```
@@ -8,6 +8,7 @@ Generated torrc files can then be distributed by running the Ansible playbook us
 ```
 $ make play
 ```
+Ansible will signal all Tor nodes which received new torrc data to reload their configuration, activating the changes without any need to manually login to a node.
 
 Your Ansible inventory must contain a host group _tornodes_ which can be created by adding the following to /etc/ansible/hosts (adapt as necessary):
 ```
