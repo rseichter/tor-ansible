@@ -1,8 +1,10 @@
+# vim:ts=4
+
 all:
 	@echo "Targets:\ngen - Generate torrc files\nplay - Execute Ansible playbook\nclean - Remove temporary files"
 
 clean:
-	rm -f *.retry
+	rm -fr generated *.retry
 
 gen:
 	for dir in conf*; do \

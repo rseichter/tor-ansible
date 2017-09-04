@@ -1,8 +1,10 @@
 #!/bin/bash
 # vim:ts=4
 
-dirs="$(find . -mindepth 1 -maxdepth 1 -type d -print)"
-if [ -z "$dirs" ]; then
+GENDIR="../../generated"
+
+nodes="$(find . -mindepth 1 -maxdepth 1 -type d -print)"
+if [ -z "$nodes" ]; then
 	echo "Can't find any subdirectories"
 	exit 1
 fi
@@ -13,10 +15,9 @@ function doGen {
 	done
 }
 
-for dir in $dirs; do
-	pushd $dir >/dev/null || exit 1
-	odir="../../generated"
-	[ -d $odir ] || (mkdir -p $odir || exit 1)
-	doGen > $odir/$dir.torrc
+for node in $nodes; do
+	pushd $node >/dev/null || exit 1
+	[ -d $GENDIR ] || (mkdir -p $GENDIR || exit 1)
+	doGen >$GENDIR/$node.torrc
 	popd >/dev/null
 done
