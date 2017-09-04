@@ -8,7 +8,7 @@
 
   tasks:
   - name: Update torrc
-    copy: src=conf/{{ ansible_hostname }}/torrc dest=/etc/tor/torrc owner=root group={{ tor_group }} mode=0640
+    copy: src=generated/{{ ansible_hostname }}.torrc dest=/etc/tor/torrc owner=root group={{ tor_group }} mode=0640
     notify:
       - Reload Tor
 
