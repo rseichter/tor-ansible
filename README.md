@@ -1,6 +1,6 @@
 ## Ansible playbook for maintaining [Tor](https://www.torproject.org/) nodes
 
-This [Ansible](https://www.ansible.com) playbook and supporting shell scripts are designed to generate `torrc` configuration files from a set of separate text files and then conveniently distribute the config data to a set of Tor nodes. Config data for each node resides in a `conf/tornode_name` or `conf.local/tornode_name` subdirectory, with tornode_name matching the Ansible ansible_hostname. Sample config files for both a Tor relay and a Tor exit are included. All subdirectories will be processed automatically. All found `*.in` files can be combined to a node-specific torrc file by using
+This [Ansible](https://www.ansible.com) playbook and supporting shell scripts are designed to generate `torrc` configuration files from a set of separate text files and then conveniently distribute the config data to a set of Tor nodes. Config data for each node resides in a `conf/tornode_name` or `conf.local/tornode_name` subdirectory, with tornode_name matching Ansible's ansible_hostname variable (host name without domain). Sample config files for both a Tor relay and a Tor exit are included. All subdirectories will be processed automatically. All found `*.in` files can be combined to a node-specific torrc file in the `generated` directory by using
 ```
 $ make gen
 ```
