@@ -3,7 +3,7 @@
 
 GENDIR="../../generated"
 
-nodes="$(find . -mindepth 1 -maxdepth 1 -type d -print)"
+nodes="$(find . -mindepth 1 -maxdepth 1 -type d -name '[^\.]*' -print)"
 if [ -z "$nodes" ]; then
 	echo "Can't find any subdirectories"
 	exit 1
