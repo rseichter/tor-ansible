@@ -1,5 +1,6 @@
-*.bak
-*.local
-*.old
-*.retry
+*~
+*bak
+*local
+*old
+*retry
 generated
